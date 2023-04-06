@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-""" Doc """
+""" using this REST API """
+
 
 import requests
 from sys import argv
