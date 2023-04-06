@@ -11,7 +11,10 @@ if __name__ == '__main__':
     id = argv[1]
     id = int(id)
 
-    user = requests.get(f"https://jsonplaceholder.typicode.com/users/{id}").json()
+    # variable qui stocke url parce que c'est trop long pour pep8
+    url_user_api = f"https://jsonplaceholder.typicode.com/users/{id}"
+
+    user = requests.get(url_user_api).json()
     todo = requests.get("https://jsonplaceholder.typicode.com/todos/").json()
 
     task = 0
