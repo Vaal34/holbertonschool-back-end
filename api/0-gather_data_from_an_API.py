@@ -7,7 +7,7 @@ from sys import argv
 
 if __name__ == '__main__':
     """ Check """
-    
+
     id = argv[1]
     id = int(id)
 
@@ -23,8 +23,8 @@ if __name__ == '__main__':
             if userid['completed']:
                 task_valid += 1
 
-    print(f"Employee {user['name']} is done with tasks({task_valid}/{task})")
+    print(f"Employee {user['name']} is done with tasks({task_valid}/{task}):")
 
     for title in todo:
         if title['completed'] and title['userId'] == id:
-            print(title['title'])
+            print(f"\t {title['title']}")
