@@ -29,7 +29,5 @@ if __name__ == '__main__':
                 my_list.append(new_dict)
         jsonfile[USER_ID] = my_list
 
-    print(jsonfile)
-
-    with open(f"{USER_ID}.json", 'w') as new_file:
+    with open("todo_all_employees.json", 'w') as new_file:
         json.dump(jsonfile, new_file)
