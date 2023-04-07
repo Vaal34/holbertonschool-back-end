@@ -19,7 +19,7 @@ if __name__ == '__main__':
     USER_ID = user['id']
     USERNAME = user['username']
 
-    with open('USER_ID.csv', 'w', encoding="UTF-8") as newfile:
+    with open(f"{USER_ID}.csv", 'w', encoding="UTF-8") as newfile:
 
         for data_task in todo:
             if data_task['userId'] == id:
