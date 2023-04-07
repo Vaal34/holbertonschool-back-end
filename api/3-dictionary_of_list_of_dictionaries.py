@@ -15,19 +15,19 @@ if __name__ == '__main__':
     todo = requests.get("https://jsonplaceholder.typicode.com/todos/").json()
 
     new_dict = {}
-    list = []
-    final_dict = {}
+    my_list = []
     jsonfile = {}
 
     for employee in user:
         USER_ID = employee['id']
         USERNAME = employee['username']
+        my_list = []
         for data in todo:
-            if USER_ID == data['id']:
+            if USER_ID == data['userId']:
                 new_dict = dict(username=USERNAME, task=data['title'],
                                 completed=data['completed'])
-                list.append(new_dict)
-        jsonfile[USER_ID] = list
+                my_list.append(new_dict)
+        jsonfile[USER_ID] = my_list
 
     print(jsonfile)
 
