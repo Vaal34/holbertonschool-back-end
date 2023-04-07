@@ -16,12 +16,12 @@ if __name__ == '__main__':
     user = requests.get(url_user_api).json()
     todo = requests.get("https://jsonplaceholder.typicode.com/todos/").json()
 
-USER_ID = user['id']
-USERNAME = user['username']
+    USER_ID = user['id']
+    USERNAME = user['username']
 
-with open('USER_ID.csv', 'w') as newfile:
+    with open('USER_ID.csv', 'w') as newfile:
     
-    for data_task in todo:
-        if data_task['userId'] == id:
-            newfile.write(f"\"{USER_ID}\",\"{USERNAME}\",")
-            newfile.write(f"\"{data_task['completed']}\",\"{data_task['title']}\"" + "\n")
+        for data_task in todo:
+            if data_task['userId'] == id:
+                newfile.write(f"\"{USER_ID}\",\"{USERNAME}\",")
+                newfile.write(f"\"{data_task['completed']}\",\"{data_task['title']}\"" + "\n")
