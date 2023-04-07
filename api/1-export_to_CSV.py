@@ -20,8 +20,9 @@ if __name__ == '__main__':
     USERNAME = user['username']
 
     with open('USER_ID.csv', 'w') as newfile:
-    
+
         for data_task in todo:
             if data_task['userId'] == id:
                 newfile.write(f"\"{USER_ID}\",\"{USERNAME}\",")
-                newfile.write(f"\"{data_task['completed']}\",\"{data_task['title']}\"" + "\n")
+                newfile.write(f"\"{data_task['completed']}\",")
+                newfile.write(f"\"{data_task['title']}\"" + "\n")
